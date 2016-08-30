@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="slides">
+	{% for post in site.posts limit:3%}
+		<div class="slide" style="background-image: url({{site.baseurl}}/img/{{post.image}})">
+			<div class="description">
+				<h1>{{ post.title }}</h1>
+
+				<p>{{ post.meta | truncatewords: 30 }}</p>
+
+				<a href="{{ post.url | prepend: site.baseurl }}" title="">Read More</a>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+
+<div class="featured">
+	{% for post in site.categories.featured limit:3%}
+		<div class="feat-post" style="background-image: url({{site.baseurl}}/img/{{post.image}})">
+		</div>
+	{% endfor %}
+</div>
+
+<div class="front-article web-content infi-scroll">
+	<h2>Latest Posts</h2>
+
+	{% for post in site.posts%}
+		<div class="container objects">
+			<div class="articles">
+				<img src="{{site.baseurl}}/img/{{post.image}}" alt="">
+
+				<h1>{{ post.title }}</h1>
+
+				<p>{{ post.meta | truncatewords: 30 }}</p>
+
+				<a href="{{ post.url | prepend: site.baseurl }}" title=""><h4>Read More</h4></a>
+			</div>
+		</div>
+	{% endfor %}
+	<a href="#"  title=""><h3 id="hide">Show Less</h3></a>
+	<a href="#" id="load" title=""><h3>View More</h3></a>
+</div>
+
+{% include aside.html %}

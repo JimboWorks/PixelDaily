@@ -1,0 +1,34 @@
+---
+layout: default
+title: Posts
+---
+
+<div id="page-posts">
+	<h2>Posts</h2>
+
+	{% for post in paginator.posts %}
+		<div class="container">
+			<div class="post-article">
+				<img src="{{site.baseurl}}/img/{{post.image}}" alt="">
+
+				<h2>{{ post.title }}</h2>
+				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+				<br>
+				<br>
+				<p>{{ post.meta | truncatewords: 30 }}</p>
+
+				<a href="{{ post.url | prepend: site.baseurl }}" title="">Read More</a>
+			</div>
+		</div>
+	{% endfor %}
+
+	<div class="pagination">
+		{% if paginator.previous_page %}
+			<a href="{{paginator.previous_page_path}}" class="previous">&laquo; Previous</a>
+		{% endif %}
+
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path }}" class="next">Next Page &raquo;</a>
+		{% endif %}
+	</div>
+</div>

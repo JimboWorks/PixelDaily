@@ -1,0 +1,27 @@
+#gallery
+	margin: 50px 0
+
+	.gallery-pics
+		padding: 20px
+		display: none
+		float: left
+		text-align: center
+
+		img
+			+size(320px 260px)
+
+	#load, #hide
+		text-align: center
+		color: $grey-color
+		font-size: $small-font-size
+		margin-bottom: 30px
+		letter-spacing: 2px
+
+	a #hide
+		color: $brand-color
+		
+		&:hover
+			font-weight: bolder
+
+		h3
+			display: inline-block

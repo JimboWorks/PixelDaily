@@ -1,0 +1,61 @@
+#post
+
+	article
+		float: left
+		+size(95% auto)
+		margin: 92px auto
+		padding: 2% 2% 4%
+		border: 1px solid $grey-color-light
+		background-color: $container-color
+
+		.post-meta 
+			font-size: $small-font-size
+			color: $grey-color
+
+
+		.post-link 
+			display: block
+			font-size: 24px
+
+
+
+		.post-title 
+			font-size: 42px
+			letter-spacing: -1px
+			line-height: 1
+			margin-top: 0
+
+			@include media-query($on-laptop) 
+				font-size: 36px
+
+		.content
+			margin-top: 50px
+			    
+
+
+
+
+	.post-content 
+		margin-bottom: $spacing-unit
+
+		h2 
+			font-size: 32px
+
+			@include media-query($on-laptop) 
+				font-size: 28px
+		        
+		    
+
+		h3 
+			font-size: 26px
+
+			@include media-query($on-laptop) 
+				font-size: 22px
+		        
+		    
+
+		h4 
+			font-size: 20px
+
+			@include media-query($on-laptop) 
+				font-size: 18px

@@ -1,0 +1,118 @@
+.web-content
+	max-width: -webkit-calc(#{$content-width} - 40.5%)
+	max-width: calc(#{$content-width} - 40.5%)
+	@extend %clearfix
+
+.web-aside
+	max-width: -webkit-calc(#{$content-width - $spacing-unit} - 73.5%)
+	max-width: calc(#{$content-width - $spacing-unit} - 73.5%)
+	@extend %clearfix
+
+.slides
+	height: 529px
+	overflow: hidden
+	position: relative
+
+	.slide
+		height: 529px
+		position: absolute
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		overflow: hidden
+
+		.description
+			max-width: -webkit-calc(#{$content-width - $spacing-unit} - 72.5%)
+			max-width: calc(#{$content-width - $spacing-unit} - 72.5%)
+			float: right
+			height: 529px
+			background: rgba(255, 255, 255, 0.8)
+			text-align: center
+
+			h1
+				padding-top: 150px
+				padding-bottom: 30px
+
+			p
+				width: 69.2%
+				margin: 0 auto
+				padding-bottom: 50px
+				font-size: 12px
+				letter-spacing: 2px
+
+		@include media-query($on-laptop)
+			.description
+				max-width: -webkit-calc(#{$on-laptop - $spacing-unit} - 72.5%)
+				max-width: calc(#{$on-laptop - $spacing-unit} - 72.5%)
+
+				h1
+					padding-top: 100px
+
+
+.featured
+	margin: 50px 0 80px
+
+	.feat-post
+		+size(335.5px 242px)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		display: inline-block
+		margin: 0 auto
+
+		&:nth-child(2)
+			margin: 0 50px
+
+
+	@include media-query($on-laptop)
+		.feat-post
+			+size(100% 242px / 2)
+			margin: 0
+
+			&:nth-child(2)
+				margin: 0
+  
+
+.front-article
+	float: left
+
+	h2
+		font-size: $base-font-size * 2
+
+
+	.container
+		border: 1px solid $grey-color-light
+		margin: 45px 0
+		background-color: $container-color
+		display: none
+
+		.articles
+			+size(90%)
+			margin: 0px auto
+			padding: 5% 5% 4%
+
+			h1
+				text-align: center
+				margin: 30px 0 20px
+
+			h4 
+				float: right
+
+				@include media-query($on-laptop)
+					float: none
+					text-align: center
+
+	#load, #hide
+		text-align: center
+		color: $grey-color
+		font-size: $small-font-size
+		margin-bottom: 30px
+		letter-spacing: 2px
+
+	#hide
+		display: none
+    
+
+
+
+

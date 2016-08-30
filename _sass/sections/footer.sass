@@ -1,0 +1,28 @@
+footer
+	background-color: $grey-color-dark
+	+size(100% 402px)
+	text-align: center
+
+	.logo
+		padding-top: 50px
+		color: white
+
+	.icons > *
+		fill: white
+		margin: 40px 20px 0
+		+size(75px)
+
+		@include media-query($on-laptop)
+			+size(50px)
+			display: inline
+			margin: 15px
+
+	p
+		color: white
+		margin-top: 70px
+		letter-spacing: 2px
+		margin-bottom: 0
+
+		@include media-query($on-laptop)
+			font-size: 12px
+			margin-top: 50px

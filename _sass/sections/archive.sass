@@ -1,0 +1,37 @@
+#page-posts
+	h2
+		margin-top: 50px
+		font-size: $base-font-size * 2
+
+	.container
+		border: 1px solid $grey-color-light
+		margin: 20px 10px 50px
+		background-color: $container-color
+		overflow: hidden
+		padding: 20px
+
+		.post-article
+
+			img 
+				+size(335.5px 242px)
+				float: left
+				margin-right: 20px
+
+				@include media-query($on-laptop)
+					+size(100%)
+					margin-bottom: 10px
+
+
+			span
+				font-size: $small-font-size
+				color: $grey-color
+
+	.pagination
+		.previous
+			float: left
+			margin: 20px
+
+		.next
+			float: right
+			margin: 20px
+
