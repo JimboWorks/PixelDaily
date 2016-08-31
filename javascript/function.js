@@ -35,14 +35,14 @@ $(function(){
         e.preventDefault();
         $(".infi-scroll .objects:hidden").slice(0, 3).show(); // select next 3 hidden divs and show them
         if($(".infi-scroll .objects:hidden").length == 0){ // check if any hidden divs still exist
-            $('#load h3').hide();
+            $('#load a').hide();
             $('#hide').show();
         }
     });
 
     $("#hide").click(function(event) { // click event for show less posts
       $(".infi-scroll .objects").slice(3, 10).hide();
-      $("#load h3").text('View More');
+      $("#load a").text('View More').show();
       $(this).hide();
     });
 });
