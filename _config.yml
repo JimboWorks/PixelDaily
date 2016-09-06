@@ -16,7 +16,7 @@ baseurl: "/PixelDaily" # the subpath of your site, e.g. /blog
 encoding: utf-8
 exclude: ["README.md"]
 permalink: pretty
-
+url: "https://PixelDaily.com"
 gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "/Posts/page:num/"

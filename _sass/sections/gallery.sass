@@ -1,14 +1,51 @@
 #gallery
-	margin: 50px 0
+	margin: 50px 0 80px
 
-	.gallery-pics
-		padding: 20px
+	h2
+		font-size: 2em
+		margin-bottom: 1.5em
+
+	.feat-post
+		+size(335.5px 242px)
+		margin: 16px
 		display: none
-		float: left
-		text-align: center
+		overflow: hidden
+		background-color: $brand-color
 
-		img
-			+size(320px 260px)
+		figure
+			+size(335.5px 100%)
+			overflow: hidden
+			opacity: 1
+			position: relative
+			z-index: 8
+
+			&:hover .modal .feat 		
+				-webkit-filter: opacity(0.4)
+				opacity: .4
+
+
+			&:hover .modal h1
+				display: block
+
+			.modal
+				+size(100%)
+				display: inline-block
+				overflow: hidden
+
+				h1
+					display: none
+					position: absolute
+					z-index: 10
+					margin: 20% 23.5%
+					color: white
+					letter-spacing: 2px
+					font-weight: bolder
+
+				.feat
+					background-repeat: no-repeat
+					background-size: cover
+					background-position: center
+					+size(100%)
 
 	#load, #hide
 		text-align: center

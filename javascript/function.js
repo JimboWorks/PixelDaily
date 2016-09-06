@@ -29,11 +29,11 @@
 **/
 
 $(function(){
-    $(".infi-scroll .objects").slice(0, 3).show(); // select the first five
+    $(".infi-scroll .objects").slice(0, 3).show().css('display', 'inline-block'); // select the first five
 
     $("#load").click(function(e){ // click event for load more
         e.preventDefault();
-        $(".infi-scroll .objects:hidden").slice(0, 3).show(); // select next 3 hidden divs and show them
+        $(".infi-scroll .objects:hidden").slice(0, 3).show().css('display', 'inline-block'); // select next 3 hidden divs and show them
         if($(".infi-scroll .objects:hidden").length == 0){ // check if any hidden divs still exist
             $('#load a').hide();
             $('#hide').show();

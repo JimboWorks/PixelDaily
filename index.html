@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Pixel Daily
 ---
 
 <div class="slides">
@@ -19,7 +19,13 @@ title: Home
 
 <div class="featured">
 	{% for post in site.categories.featured limit:3%}
-		<div class="feat-post" style="background-image: url({{site.baseurl}}/img/{{post.image}})">
+		<div class="feat-post" >
+		    <figure>
+		      <div class="modal">
+		        <a href="{{ post.url | prepend: site.baseurl }}"><h1>View Post</h1></a>
+		        <div class="feat" style="background-image: url({{site.baseurl}}/img/{{post.image}})"></div>
+		      </div>
+		    </figure>
 		</div>
 	{% endfor %}
 </div>
